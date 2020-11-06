@@ -1,109 +1,90 @@
 {
+    "CompileStatus": "Successful",
+    "MlibObjs": {},
     "PrevCompiledModules": {
-        "ShiftRegister": {
-            "WB1J1_d": {
-                "bytes": 7865,
-                "mod": "ShiftRegister",
-                "out": "WB1J1_d.o",
-                "mode": 4,
-                "archive": "archive.10/_prev_archive_1.a"
-            }
-        },
-        "Multiplexer": {
-            "UxyT3_d": {
-                "bytes": 6470,
-                "mod": "Multiplexer",
-                "out": "UxyT3_d.o",
-                "mode": 4,
-                "archive": "archive.10/_prev_archive_1.a"
-            }
-        },
         "BarrelShiftRegister": {
             "ts568_d": {
+                "archive": "archive.40/_prev_archive_1.a",
                 "bytes": 7861,
                 "mod": "BarrelShiftRegister",
-                "out": "ts568_d.o",
                 "mode": 4,
-                "archive": "archive.10/_prev_archive_1.a"
-            }
-        },
-        "Mux2to1": {
-            "wxUbx_d": {
-                "bytes": 6924,
-                "mod": "Mux2to1",
-                "out": "wxUbx_d.o",
-                "mode": 4,
-                "archive": "archive.10/_prev_archive_1.a"
+                "out": "ts568_d.o"
             }
         },
         "Register": {
             "kynWL_d": {
+                "archive": "archive.40/_prev_archive_1.a",
                 "bytes": 7480,
                 "mod": "Register",
-                "out": "kynWL_d.o",
                 "mode": 4,
-                "archive": "archive.10/_prev_archive_1.a"
+                "out": "kynWL_d.o"
+            }
+        },
+        "Mux2to1": {
+            "wxUbx_d": {
+                "archive": "archive.40/_prev_archive_1.a",
+                "bytes": 6924,
+                "mod": "Mux2to1",
+                "mode": 4,
+                "out": "wxUbx_d.o"
+            }
+        },
+        "CheckPeg": {
+            "f8YD0_d": {
+                "archive": "archive.40/_prev_archive_1.a",
+                "bytes": 13107,
+                "mod": "CheckPeg",
+                "mode": 4,
+                "out": "f8YD0_d.o"
             }
         },
         "Memory": {
             "f0K8C_d": {
+                "archive": "archive.40/_prev_archive_1.a",
                 "bytes": 9389,
                 "mod": "Memory",
-                "out": "f0K8C_d.o",
                 "mode": 4,
-                "archive": "archive.10/_prev_archive_1.a"
-            }
-        },
-        "std": {
-            "reYIK_d": {
-                "bytes": 29004,
-                "mod": "std",
-                "out": "reYIK_d.o",
-                "mode": 4,
-                "archive": "archive.10/_prev_archive_1.a"
-            }
-        },
-        "Adder": {
-            "xUt1z_d": {
-                "bytes": 8200,
-                "mod": "Adder",
-                "out": "xUt1z_d.o",
-                "mode": 4,
-                "archive": "archive.10/_prev_archive_1.a"
+                "out": "f0K8C_d.o"
             }
         },
         "task2_tb": {
             "qn2Gx_d": {
-                "bytes": 36684,
+                "archive": "archive.40/_6659_archive_1.a",
+                "bytes": 60752,
                 "mod": "task2_tb",
-                "mode": 4,
                 "out": "qn2Gx_d.o",
-                "archive": "archive.10/_15686_archive_1.a"
+                "mode": 4
+            }
+        },
+        "ShiftRegister": {
+            "WB1J1_d": {
+                "archive": "archive.40/_prev_archive_1.a",
+                "bytes": 7865,
+                "mod": "ShiftRegister",
+                "mode": 4,
+                "out": "WB1J1_d.o"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "archive": "archive.40/_prev_archive_1.a",
+                "bytes": 29004,
+                "mod": "std",
+                "mode": 4,
+                "out": "reYIK_d.o"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "bytes": 10372,
+                "archive": "archive.40/_6659_archive_1.a",
+                "bytes": 9670,
                 "mod": "...MASTER...",
-                "mode": 4,
                 "out": "amcQw_d.o",
-                "archive": "archive.10/_15686_archive_1.a"
+                "mode": 4
             }
         }
     },
-    "MlibObjs": {},
-    "LVLData": [
-        "SIM"
-    ],
-    "stat": {
-        "nMops": 2164
-    },
     "NameTable": {
-        "Memory": [
-            "Memory",
-            "f0K8C",
-            "module"
-        ],
         "std": [
             "std",
             "reYIK",
@@ -114,14 +95,14 @@
             "qn2Gx",
             "module"
         ],
-        "ShiftRegister": [
-            "ShiftRegister",
-            "WB1J1",
+        "Memory": [
+            "Memory",
+            "f0K8C",
             "module"
         ],
-        "Multiplexer": [
-            "Multiplexer",
-            "UxyT3",
+        "CheckPeg": [
+            "CheckPeg",
+            "f8YD0",
             "module"
         ],
         "Mux2to1": [
@@ -129,19 +110,19 @@
             "wxUbx",
             "module"
         ],
-        "BarrelShiftRegister": [
-            "BarrelShiftRegister",
-            "ts568",
-            "module"
-        ],
         "Register": [
             "Register",
             "kynWL",
             "module"
         ],
-        "Adder": [
-            "Adder",
-            "xUt1z",
+        "ShiftRegister": [
+            "ShiftRegister",
+            "WB1J1",
+            "module"
+        ],
+        "BarrelShiftRegister": [
+            "BarrelShiftRegister",
+            "ts568",
             "module"
         ],
         "...MASTER...": [
@@ -150,28 +131,33 @@
             "module"
         ]
     },
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 60812
-    },
     "CompileStrategy": "fullobj",
-    "CompileProcesses": [
-        "cgproc.15686.json"
-    ],
-    "PEModules": [],
     "CurCompileUdps": {},
     "CurCompileModules": [
         "...MASTER...",
         "task2_tb"
     ],
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 62728
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.6659.json"
+    ],
     "Misc": {
-        "archive_dir": "archive.10",
         "default_output_dir": "csrc",
         "cwd": "/afs/andrew.cmu.edu/usr11/aqd/private/18240/Lab5",
-        "daidir_abs": "/afs/andrew.cmu.edu/usr11/aqd/private/18240/Lab5/simv.daidir",
-        "csrc_abs": "/afs/andrew.cmu.edu/usr11/aqd/private/18240/Lab5/csrc",
         "csrc": "csrc",
-        "daidir": "simv.daidir"
+        "csrc_abs": "/afs/andrew.cmu.edu/usr11/aqd/private/18240/Lab5/csrc",
+        "daidir_abs": "/afs/andrew.cmu.edu/usr11/aqd/private/18240/Lab5/simv.daidir",
+        "daidir": "simv.daidir",
+        "archive_dir": "archive.40"
     },
-    "CompileStatus": "Successful"
+    "stat": {
+        "nMops": 5256
+    }
 }

@@ -1914,7 +1914,8 @@ void  hsM_0_0 (UB  * pcode, scalar  val);
 void  hsM_1_0 (UB  * pcode, scalar  val);
 void  hsM_2_0 (UB  * pcode, scalar  val);
 void  hsM_3_0 (UB  * pcode, scalar  val);
-void  hsM_4_0 (UB  * pcode, vec32  * I858, U  I794);
+void  hsM_4_0 (UB  * pcode, scalar  val);
+void  hsM_5_0 (UB  * pcode, vec32  * I858, U  I794);
 void  hsG_0 (struct dummyq_struct * I1008, EBLK  * I1009, U  I714);
 #ifdef __cplusplus
 }

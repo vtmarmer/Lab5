@@ -56,10 +56,15 @@ module Compile
   logic w1, w2, w3, w4;
 
   assign {used0, used1, used2, used3} = {red0, red1, red2, red3};
-  assign red = red0 + red1 + red2 + red3;
 
   logic whiteCalc0, whiteCalc1, whiteCalc2, whiteCalc3;
-  assign white = whiteCalc0 + whiteCalc1 + whiteCalc2 + whiteCalc3;
+  logic [2:0] addrd1, addrd2, addwh1, addwh2;
+  Adder #(3) addr1 ({1'b0, 1'b0, red0}, {1'b0, 1'b0, red1}, 1'b0, addrd1, ),
+             addr2 ({1'b0, 1'b0, red2}, {1'b0, 1'b0, red3}, 1'b0, addrd2, ),
+             addr3 (addrd1, addrd2, 1'b0, red, ),
+             addr4 ({1'b0, 1'b0, whiteCalc0}, {1'b0, 1'b0, whiteCalc1}, 1'b0, addwh1, ),
+             addr5 ({1'b0, 1'b0, whiteCalc2}, {1'b0, 1'b0, whiteCalc3}, 1'b0, addwh2, ),
+             addr6 (addwh1, addwh2, 1'b0, white, );
 
   logic w00, w01, w02, w03, w10, w11, w12, w13,
         w20, w21, w22, w23, w30, w31, w32, w33;
@@ -93,31 +98,3 @@ module Compile
   assign w33 = m33 & ~(w30 | w31 | w32) & ~(w03 | w13 | w23);
 
 endmodule: Compile
-
-module Grader_test;
-
-  logic [2:0] guess0, guess1, guess2, guess3;
-  logic [2:0] pattern0, pattern1, pattern2, pattern3;
-  logic [2:0] red, white;
-
-  Grader grade (.*);
-
-  initial begin
-    $monitor($time,,"pattern:%b, guess:%b, red, %b, white %b,",
-                    {pattern3, pattern2, pattern1, pattern0},
-                    {guess3, guess2, guess1, guess0}, red, white);
-
-    {pattern3, pattern2, pattern1, pattern0} = 12'b000_000_001_000;
-    {guess3, guess2, guess1, guess0} = 12'b001_000_001_000;
-    #5;
-    {pattern3, pattern2, pattern1, pattern0} = 12'b000_000_001_000;
-    {guess3, guess2, guess1, guess0} = 12'b001_000_001_001;
-    #5;
-    {pattern3, pattern2, pattern1, pattern0} = 12'b000_000_001_000;
-    {guess3, guess2, guess1, guess0} = 12'b001_001_000_001;
-    #5;
-
-    $finish;
-  end
-
-endmodule: Grader_test

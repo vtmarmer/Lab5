@@ -1,9 +1,4 @@
 {
-    "Memory": [
-        "Memory",
-        "f0K8C",
-        "module"
-    ],
     "std": [
         "std",
         "reYIK",
@@ -14,14 +9,14 @@
         "qn2Gx",
         "module"
     ],
-    "ShiftRegister": [
-        "ShiftRegister",
-        "WB1J1",
+    "Memory": [
+        "Memory",
+        "f0K8C",
         "module"
     ],
-    "Multiplexer": [
-        "Multiplexer",
-        "UxyT3",
+    "CheckPeg": [
+        "CheckPeg",
+        "f8YD0",
         "module"
     ],
     "Mux2to1": [
@@ -29,19 +24,19 @@
         "wxUbx",
         "module"
     ],
-    "BarrelShiftRegister": [
-        "BarrelShiftRegister",
-        "ts568",
-        "module"
-    ],
     "Register": [
         "Register",
         "kynWL",
         "module"
     ],
-    "Adder": [
-        "Adder",
-        "xUt1z",
+    "ShiftRegister": [
+        "ShiftRegister",
+        "WB1J1",
+        "module"
+    ],
+    "BarrelShiftRegister": [
+        "BarrelShiftRegister",
+        "ts568",
         "module"
     ],
     "...MASTER...": [

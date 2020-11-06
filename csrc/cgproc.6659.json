@@ -1,0 +1,48 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {},
+        "Memory": {},
+        "task2_tb": {
+            "Compiled": "Yes",
+            "Compiled Times": 15
+        },
+        "CheckPeg": {},
+        "Mux2to1": {},
+        "Register": {},
+        "ShiftRegister": {},
+        "BarrelShiftRegister": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "archive": "archive.40/_6659_archive_1.a",
+            "bytes": 9670,
+            "mode": 4
+        },
+        "qn2Gx_d": {
+            "mod": "task2_tb",
+            "out": "qn2Gx_d.o",
+            "archive": "archive.40/_6659_archive_1.a",
+            "bytes": 61306,
+            "mode": 4
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.40/_6659_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    9670
+                ],
+                [
+                    "qn2Gx_d.o",
+                    61306
+                ]
+            ],
+            "size": 70976
+        }
+    ]
+}

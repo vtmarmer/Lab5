@@ -9,16 +9,16 @@ module Task2
     input  logic clock, reset);
 
     logic [11:0] pattern;
-    assign pattern = 12'b010_100_010_101; // or any other pattern you like
+    assign pattern= 12'o1111;
 
     logic tenthRound, inc;
     fsm control(.*);
 
     logic [2:0] red, white;
     Grader scoreThis(.guess0(guess[2:0]), .guess1(guess[5:3]), .guess2(guess[8:6]),
-                     .guess3(guess[11:9]), .pattern0(pattern[2:0]), .done(), .clock(),
+                     .guess3(guess[11:9]), .pattern0(pattern[2:0]),
                      .pattern1(pattern[5:3]), .pattern2(pattern[8:6]),
-                     .pattern3(pattern[11:9]), .reset(), .go(), .red, .white);
+                     .pattern3(pattern[11:9]), .red, .white);
 
     logic [4:0] redVal, whiteVal;
     calcFeedback feedback(.*);
@@ -35,48 +35,47 @@ endmodule : Task2
 
 module calcFeedback
     (input logic [11:0] guess,
-     input logic [2:0] red, white,
      input logic [4:0] redVal, whiteVal,
      output logic [2:0] feedback0, feedback1, feedback2, feedback3);
 
     logic [12:0] tmp;
     always_comb begin
         case(redVal)
-            5'b1_0000: begin
+            5'b0_0001: begin
                 case(whiteVal)
-                    5'b1_0000: tmp= 12'b0;
-                    5'b0_1000: tmp= 12'o1000;
+                    5'b0_0001: tmp= 12'b0;
+                    5'b0_0010: tmp= 12'o1000;
                     5'b0_0100: tmp= 12'o1100;
-                    5'b0_0010: tmp= 12'o1110;
-                    5'b0_0001: tmp= 12'o1111;
-                endcase
-            end
-
-            5'b0_1000: begin
-                case(whiteVal)
-                    5'b1_0000: tmp= 12'o7000;
-                    5'b0_1000: tmp= 12'o7100;
-                    5'b0_0100: tmp= 12'o7110;
-                    5'b0_0010: tmp= 12'o7111;
-                endcase
-            end
-
-            5'b0_0100: begin
-                case(whiteVal)
-                    5'b1_0000: tmp= 12'o7700;
-                    5'b0_1000: tmp= 12'o7710;
-                    5'b0_0100: tmp= 12'o7711;
+                    5'b0_1000: tmp= 12'o1110;
+                    5'b1_0000: tmp= 12'o1111;
                 endcase
             end
 
             5'b0_0010: begin
                 case(whiteVal)
-                    5'b1_0000: tmp= 12'o7770;
-                    5'b0_1000: tmp= 12'o7771;
+                    5'b0_0001: tmp= 12'o7000;
+                    5'b0_0010: tmp= 12'o7100;
+                    5'b0_0100: tmp= 12'o7110;
+                    5'b0_1000: tmp= 12'o7111;
                 endcase
             end
 
-            5'b0_0001: tmp= 12'o7777;
+            5'b0_0100: begin
+                case(whiteVal)
+                    5'b0_0001: tmp= 12'o7700;
+                    5'b0_0010: tmp= 12'o7710;
+                    5'b0_0100: tmp= 12'o7711;
+                endcase
+            end
+
+            5'b0_1000: begin
+                case(whiteVal)
+                    5'b0_0001: tmp= 12'o7770;
+                    5'b0_0010: tmp= 12'o7771;
+                endcase
+            end
+
+            5'b1_0000: tmp= 12'o7777;
         endcase
         {feedback0, feedback1, feedback2, feedback3}= tmp;
     end
@@ -115,13 +114,13 @@ module fsm
 
 endmodule : fsm
 
+/*
 module Grader
     (input logic [2:0] guess0, guess1, guess2, guess3,
      input logic [2:0] pattern0, pattern1, pattern2, pattern3,
-     output logic [2:0] red, white,
-     input logic clock, reset, go,
-     output logic done);
+     output logic [2:0] red, white);
 
-    assign red= 3'd2;
-    assign white= 3'd2;
+    assign red= 3'd4;
+    assign white= 3'd0;
 endmodule : Grader
+*/

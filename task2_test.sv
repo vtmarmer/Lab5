@@ -11,10 +11,10 @@ module task2_tb ();
     initial begin
         $display("[start_game, grade_it]");
         $monitor($time,,
-                 "%s [%b%b] guess=%o, feedback=%o, round_number=%h [%b%b] %b",
-                 DUT.control.currState.name, start_game, grade_it, guess,
+                 "%s [%b%b] guess=%o, pattern=%o, feedback=%o, round_number=%h [%b%b] // %d %d",
+                 DUT.control.currState.name, start_game, grade_it, guess, DUT.pattern,
                  {feedback0, feedback1, feedback2, feedback3},
-                 round_number, won, lost, DUT.tenthRound);
+                 round_number, won, lost, DUT.red, DUT.white);
         clock= 0;
         forever #5 clock= ~clock;
     end
@@ -26,7 +26,7 @@ module task2_tb ();
         @ (posedge clock);
         reset <= 0;
 
-        guess <= 12'o7654;
+        guess <=12'o1111;
         grade_it <= 1;
         @ (posedge clock);
         @ (posedge clock);
@@ -39,14 +39,6 @@ module task2_tb ();
         @ (posedge clock);
         @ (posedge clock);
         @ (posedge clock);
-
-        start_game <= 1;
-        grade_it <= 0;
-        @ (posedge clock);
-        start_game <= 0;
-
-        guess <= 12'o1154;
-        grade_it <= 1;
         @ (posedge clock);
         @ (posedge clock);
         @ (posedge clock);
