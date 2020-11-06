@@ -1,0 +1,177 @@
+{
+    "MlibObjs": {},
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileStatus": "Successful",
+    "stat": {
+        "nMops": 2211
+    },
+    "PrevCompiledModules": {
+        "Multiplexer": {
+            "UxyT3_d": {
+                "mode": 4,
+                "bytes": 6470,
+                "mod": "Multiplexer",
+                "archive": "archive.4/_prev_archive_1.a",
+                "out": "UxyT3_d.o"
+            }
+        },
+        "Adder": {
+            "xUt1z_d": {
+                "mode": 4,
+                "bytes": 8200,
+                "mod": "Adder",
+                "archive": "archive.4/_prev_archive_1.a",
+                "out": "xUt1z_d.o"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "mode": 4,
+                "bytes": 29004,
+                "mod": "std",
+                "archive": "archive.4/_prev_archive_1.a",
+                "out": "reYIK_d.o"
+            }
+        },
+        "task2_tb": {
+            "qn2Gx_d": {
+                "mode": 4,
+                "bytes": 39443,
+                "mod": "task2_tb",
+                "out": "qn2Gx_d.o",
+                "archive": "archive.4/_10986_archive_1.a"
+            }
+        },
+        "BarrelShiftRegister": {
+            "ts568_d": {
+                "mode": 4,
+                "bytes": 7861,
+                "mod": "BarrelShiftRegister",
+                "archive": "archive.4/_prev_archive_1.a",
+                "out": "ts568_d.o"
+            }
+        },
+        "Mux2to1": {
+            "wxUbx_d": {
+                "mode": 4,
+                "bytes": 6924,
+                "mod": "Mux2to1",
+                "archive": "archive.4/_prev_archive_1.a",
+                "out": "wxUbx_d.o"
+            }
+        },
+        "Memory": {
+            "f0K8C_d": {
+                "mode": 4,
+                "bytes": 9389,
+                "mod": "Memory",
+                "archive": "archive.4/_prev_archive_1.a",
+                "out": "f0K8C_d.o"
+            }
+        },
+        "ShiftRegister": {
+            "WB1J1_d": {
+                "mode": 4,
+                "bytes": 7865,
+                "mod": "ShiftRegister",
+                "archive": "archive.4/_prev_archive_1.a",
+                "out": "WB1J1_d.o"
+            }
+        },
+        "Register": {
+            "kynWL_d": {
+                "mode": 4,
+                "bytes": 7480,
+                "mod": "Register",
+                "archive": "archive.4/_prev_archive_1.a",
+                "out": "kynWL_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "mode": 4,
+                "bytes": 10372,
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "archive": "archive.4/_10986_archive_1.a"
+            }
+        }
+    },
+    "NameTable": {
+        "task2_tb": [
+            "task2_tb",
+            "qn2Gx",
+            "module"
+        ],
+        "Mux2to1": [
+            "Mux2to1",
+            "wxUbx",
+            "module"
+        ],
+        "BarrelShiftRegister": [
+            "BarrelShiftRegister",
+            "ts568",
+            "module"
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "Multiplexer": [
+            "Multiplexer",
+            "UxyT3",
+            "module"
+        ],
+        "Adder": [
+            "Adder",
+            "xUt1z",
+            "module"
+        ],
+        "Memory": [
+            "Memory",
+            "f0K8C",
+            "module"
+        ],
+        "ShiftRegister": [
+            "ShiftRegister",
+            "WB1J1",
+            "module"
+        ],
+        "Register": [
+            "Register",
+            "kynWL",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CompileStrategy": "fullobj",
+    "Misc": {
+        "default_output_dir": "csrc",
+        "daidir_abs": "/afs/andrew.cmu.edu/usr11/aqd/private/18240/Lab5/simv.daidir",
+        "daidir": "simv.daidir",
+        "cwd": "/afs/andrew.cmu.edu/usr11/aqd/private/18240/Lab5",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/andrew.cmu.edu/usr11/aqd/private/18240/Lab5/csrc",
+        "archive_dir": "archive.4"
+    },
+    "CurCompileUdps": {},
+    "CompileProcesses": [
+        "cgproc.10986.json"
+    ],
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 60812
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "task2_tb"
+    ],
+    "PEModules": []
+}

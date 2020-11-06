@@ -1,3 +1,5 @@
+`default_nettype none
+
 module task2_tb ();
     logic [11:0] guess;
     logic [2:0] feedback0, feedback1, feedback2, feedback3;
@@ -9,10 +11,10 @@ module task2_tb ();
     initial begin
         $display("[start_game, grade_it]");
         $monitor($time,,
-                 "%s [%b%b] guess=%o, feedback=%o, round_number=%h [%b] %b",
+                 "%s [%b%b] guess=%o, feedback=%o, round_number=%h [%b%b] %b",
                  DUT.control.currState.name, start_game, grade_it, guess,
                  {feedback0, feedback1, feedback2, feedback3},
-                 round_number, won, DUT.tenthRound);
+                 round_number, won, lost, DUT.tenthRound);
         clock= 0;
         forever #5 clock= ~clock;
     end
