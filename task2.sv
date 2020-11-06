@@ -93,7 +93,7 @@ module fsm
     always_comb begin
         case(currState)
             start: nextState= (grade_it) ? scoring : start;
-            scoring: nextState= (grade_it) ? ((tenthRound | won) ? roundOver : scoring) : start;
+            scoring: nextState= (tenthRound | won) ? roundOver : scoring;
             roundOver: nextState= start_game ? start : roundOver;
         endcase
     end
@@ -102,7 +102,7 @@ module fsm
     always_comb begin
         case(currState)
             start: inc= ~grade_it;
-            scoring: inc= grade_it ? ((tenthRound | won) ? 0 : 1 ) : 1;
+            scoring: inc= (tenthRound | won) ? 1 : 0 ;
             roundOver: inc= 1;
         endcase
     end

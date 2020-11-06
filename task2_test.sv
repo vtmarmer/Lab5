@@ -21,10 +21,10 @@ module task2_tb ();
 
     initial begin
         start_game <= 1;
-        grade_it <= 0;
-        reset <= 0;
+        reset= 1;
+        grade_it= 0;
         @ (posedge clock);
-        reset <= 1;
+        reset <= 0;
 
         guess <= 12'o7654;
         grade_it <= 1;

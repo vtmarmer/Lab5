@@ -83,12 +83,12 @@ BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
 AKLOG=/usr/bin/aklog
 0
 3
-1604611592 library.sv
-1604624432 task2.sv
-1604624557 task2_test.sv
+1604625133 library.sv
+1604625272 task2.sv
+1604624960 task2_test.sv
 4
 0 
 1440744113 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so
 1440743874 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
 1440743866 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
-1604624559 simv.daidir
+1604625274 simv.daidir
